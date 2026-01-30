@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Vaulting & Climbing | Gameplay Programmer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+<div id="page-wrapper">
+
+<!-- HEADER -->
+<section id="header" class="wrapper">
+    <div id="logo">
+        <h1>Vaulting & Climbing</h1>
+        <p>Traversal Mechanics & IK Systems · Unreal Engine · C++</p>
+    </div>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="projects.html">Projects</a></li>
+            <li><a href="project_GLSL.html">Engine</a></li>
+        </ul>
+    </nav>
+</section>
+
+<!-- GAMEPLAY -->
+<section class="wrapper style1">
+    <div class="title">Gameplay</div>
+    <div class="container">
+        <iframe width="100%" height="480"
+        src="https://www.youtube.com/embed/RjgEMiBeOgY"
+        allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- PROJECT OVERVIEW + BULLETS -->
+<section class="wrapper style2">
+    <div class="title">Project Overview</div>
+    <div class="container">
+        <p>
+            This project was built to explore advanced character traversal and animation
+            systems in Unreal Engine. The focus was on implementing vaulting, climbing,
+            and simple parkour mechanics while maintaining stable animation blending,
+            grounded movement, and responsive player control using C++.
+        </p>
+
+        <ul style="margin-top: 1.2rem;">
+            <li>IK-based leg placement for ground alignment and stairs</li>
+            <li>Dynamic foot adjustment based on surface detection</li>
+            <li>Vaulting and climbing traversal mechanics</li>
+            <li>Simple parkour-style movement experimentation</li>
+            <li>UI displaying ammo for multiple weapon types</li>
+            <li>Basic enemy AI for traversal-combat interaction testing</li>
+            <li>Focus on clean movement state transitions</li>
+        </ul>
+    </div>
+</section>
+
+<!-- DETAILED EXPLANATION -->
+<section class="wrapper style1">
+    <div class="title">System Breakdown</div>
+    <div class="container">
+
+        <h3>IK Leg Placement & Ground Detection</h3>
+        <p>
+            The project demonstrates inverse kinematics for leg placement to ensure
+            the character’s feet properly align with uneven terrain and stairs.
+            Line traces are used to detect surface height and normals, allowing
+            the animation system to dynamically adjust foot position and rotation
+            for more believable grounded movement.
+        </p>
+
+        <h3>Stairs Handling & Traversal Stability</h3>
+        <p>
+            Special attention was given to stair traversal, where traditional animation
+            often breaks immersion. By combining IK leg adjustment with movement state
+            checks, the character maintains consistent footing while ascending or
+            descending steps, reducing foot sliding and clipping.
+        </p>
+
+        <h3>Vaulting, Climbing, and Parkour Mechanics</h3>
+        <p>
+            Vaulting and climbing systems were implemented to explore basic parkour-style
+            movement. Environmental detection using traces determines whether an obstacle
+            can be vaulted over or climbed. These mechanics are designed to blend smoothly
+            with standard movement without interrupting player control.
+        </p>
+
+        <h3>Weapon UI & Combat Context</h3>
+        <p>
+            A simple UI system displays ammo counts for different weapon types, allowing
+            the project to test traversal while armed. This ensures that vaulting,
+            climbing, and movement transitions do not interfere with weapon handling
+            or HUD updates.
+        </p>
+
+        <h3>Basic Enemy AI</h3>
+        <p>
+            Basic enemy AI was included to validate traversal mechanics under gameplay
+            pressure. Enemies provide minimal combat interaction, helping test how
+            movement, animation, and IK systems behave when the player is forced to
+            react quickly or reposition during traversal.
+        </p>
+
+        <h3>Goal of the Project</h3>
+        <p>
+            The primary goal was not to build a full game, but to understand how
+            traversal, animation, IK, and combat-adjacent systems interact at the
+            C++ level. This project serves as a foundation for more advanced movement
+            and parkour systems in future gameplay prototypes.
+        </p>
+
+    </div>
+</section>
+
+<!-- TECHNICAL BREAKDOWN -->
+<section class="wrapper style3">
+    <div class="title">Technical Breakdown</div>
+    <div class="container">
+        <div class="row aln-center">
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Traversal Detection</h3>
+                    <p>Vaulting and climbing detection using traces and movement states.</p>
+                </section>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>IK & Animation</h3>
+                    <p>Dynamic leg IK for uneven ground and stairs.</p>
+                </section>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>System Integration</h3>
+                    <p>Traversal, weapons, UI, and AI working together.</p>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ENGINEERING CHALLENGES -->
+<section class="wrapper style2">
+    <div class="title">Engineering Challenges</div>
+    <div class="container">
+        <ul>
+            <li>Stabilizing IK during fast movement and traversal</li>
+            <li>Preventing animation conflicts between climbing and combat</li>
+            <li>Maintaining clean and readable movement state logic</li>
+            <li>Ensuring Ik updates remain consistent and optimzed during traversal</li>
+        </ul>
+    </div>
+</section>
+
+<!-- TAKEAWAY -->
+<section class="wrapper style1">
+    <div class="title">Takeaway</div>
+    <div class="container">
+        <ul>
+            <li>Advanced traversal and movement systems</li>
+            <li>IK-driven animation grounding</li>
+            <li>Parkour and climbing mechanics design</li>
+            <li>System-level gameplay thinking</li>
+        </ul>
+
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="project-gm.html" class="button primary">
+                Next Project →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</div>
+</body>
+</html>

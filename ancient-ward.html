@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ancient Ward | Gameplay Programmer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+<div id="page-wrapper">
+
+<!-- HEADER -->
+<section id="header" class="wrapper">
+    <div id="logo">
+        <h1>Ancient Ward</h1>
+        <p>Combat System & Dungeon Prototype · Unreal Engine · C++</p>
+    </div>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="projects.html">Projects</a></li>
+            <li><a href="project_GLSL.html">Engine</a></li>
+        </ul>
+    </nav>
+</section>
+
+<!-- GAMEPLAY VIDEO + BULLETS -->
+<section class="wrapper style1">
+    <div class="title">Gameplay</div>
+    <div class="container">
+
+        <iframe width="100%" height="480"
+        src="https://www.youtube.com/embed/kl1ynOHHXOY"
+        allowfullscreen></iframe>
+
+    </div>
+</section>
+
+<!-- PROJECT OVERVIEW -->
+<section class="wrapper style2">
+    <div class="title">Project Overview</div>
+    <div class="container">
+        <p>
+            <strong>Ancient Ward</strong> is a combat and dungeon-focused Unreal Engine prototype
+            built as a progression from earlier gameplay experiments. The project expands
+            on core combat mechanics by introducing structured level flow, weapon pickups,
+            timed challenges, and a complete dungeon experience culminating in a boss fight.
+        </p>
+
+        <ul style="margin-top: 1.5rem;">
+            <li>Step up from previous project with expanded gameplay systems</li>
+            <li>Weapon pickup system including sword acquisition</li>
+            <li>Power-ups that modify combat and player abilities</li>
+            <li>Trap systems and timed events controlling area progression</li>
+            <li>Dungeon-style level design from entry to final boss</li>
+            <li>UI feedback and sound cues guiding player actions</li>
+            <li>Combo-based combat using light and heavy attacks</li>
+            <li>Multiple combo variations (e.g. 1-1-2, 2-1-2, etc.)</li>
+            <li>Final boss encounter required to complete the level</li>
+        </ul>
+    </div>
+</section>
+
+<!-- DETAILED EXPLANATION -->
+<section class="wrapper style1">
+    <div class="title">Development Breakdown</div>
+    <div class="container">
+
+        <h3>Progression From Previous Project</h3>
+        <p>
+            Ancient Ward was designed as a direct step forward from earlier gameplay prototypes.
+            Instead of focusing on a single mechanic, this project brings multiple systems
+            together into a cohesive dungeon-style experience. The goal was to understand
+            how individual gameplay systems interact when combined into a full level flow.
+        </p>
+
+        <h3>Dungeon-Style Level Design</h3>
+        <p>
+            The level is structured like a traditional dungeon, guiding the player from
+            the starting area through combat encounters, traps, and gated progression.
+            Timed events and environmental triggers require the player to complete specific
+            tasks in order to unlock new areas, reinforcing pacing and challenge escalation.
+        </p>
+
+        <h3>Weapon Pickups, Power-Ups, and Traps</h3>
+        <p>
+            The player can acquire weapons such as a sword during gameplay, altering combat
+            behavior and available actions. Power-ups temporarily enhance abilities, while
+            trap systems introduce environmental hazards. These systems are tightly integrated
+            with the level logic to ensure they meaningfully affect player decision-making.
+        </p>
+
+        <h3>Combo-Based Combat System</h3>
+        <p>
+            Combat is built around a flexible combo system using light and heavy attacks.
+            Inputs can be chained in multiple patterns such as light-light-heavy (1-1-2)
+            or heavy-light-heavy (2-1-2), allowing for varied combat strategies. The system
+            was designed to support future expansion without rewriting core logic.
+        </p>
+
+        <h3>UI, Sound Cues, and Player Feedback</h3>
+        <p>
+            UI elements and sound cues provide constant feedback to the player, indicating
+            successful hits, combo progression, power-up activation, and objective status.
+            These cues are essential for maintaining clarity during fast-paced combat and
+            time-sensitive events within the dungeon.
+        </p>
+
+        <h3>Final Boss Encounter</h3>
+        <p>
+            The dungeon concludes with a final boss fight that requires mastery of the
+            combat and movement systems introduced throughout the level. The encounter
+            serves as a validation of the full gameplay loop, combining combat, timing,
+            and situational awareness to complete the level.
+        </p>
+
+    </div>
+</section>
+
+<!-- TECHNICAL BREAKDOWN -->
+<section class="wrapper style3">
+    <div class="title">Technical Breakdown</div>
+    <div class="container">
+        <div class="row aln-center">
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Stamina System</h3>
+                    <p>Stamina-driven actions affecting combat and movement.</p>
+                </section>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Combo System</h3>
+                    <p>Flexible light/heavy attack chains with multiple variations.</p>
+                </section>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Timed Events</h3>
+                    <p>Triggers and countdown-based gameplay gates.</p>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ENGINEERING CHALLENGES -->
+<section class="wrapper style2">
+    <div class="title">Engineering Challenges</div>
+    <div class="container">
+        <ul>
+            <li>Designing combo logic that supports varied input sequences</li>
+            <li>Coordinating traps and timed events with level flow</li>
+            <li>Maintaining responsiveness during fast combo chaining</li>
+            <li>Ensuring UI and audio feedback remain synchronized</li>
+        </ul>
+    </div>
+</section>
+
+<!-- TAKEAWAY -->
+<section class="wrapper style1">
+    <div class="title">Takeaway</div>
+    <div class="container">
+
+        <ul>
+            <li>Advanced combat system design</li>
+            <li>Dungeon-style gameplay architecture</li>
+            <li>System interaction and progression design</li>
+            <li>Scalable combo and event-driven logic</li>
+        </ul>
+
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="vaulting-climbing.html" class="button primary">
+                Next Project →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- NEXT PROJECT 
+<section class="wrapper style3">
+    <div class="container" style="text-align: center;">
+        <h3>Continue exploring my gameplay and engine work</h3>
+        <a href="vaulting-climbing.html" class="button large primary">
+            Next Project →
+        </a>
+    </div>
+</section>-->
+
+</div>
+</body>
+</html>

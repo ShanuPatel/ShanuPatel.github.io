@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Project G_M | Gameplay Programmer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+<div id="page-wrapper">
+
+<!-- HEADER -->
+<section id="header" class="wrapper">
+    <div id="logo">
+        <h1>Project G_M</h1>
+        <p>Advanced Gameplay Systems · Unreal Engine · C++</p>
+    </div>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="projects.html">Projects</a></li>
+            <li><a href="project_GLSL.html">Engine</a></li>
+        </ul>
+    </nav>
+</section>
+
+<!-- GAMEPLAY -->
+<section class="wrapper style1">
+    <div class="title">Gameplay</div>
+    <div class="container">
+        <iframe width="100%" height="480"
+        src="https://www.youtube.com/embed/nCJuiUPzbKA"
+        allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- PROJECT OVERVIEW + BULLETS -->
+<section class="wrapper style2">
+    <div class="title">Project Overview</div>
+    <div class="container">
+        <p>
+            <strong>Project G_M</strong> expands directly on the previous Vaulting & Climbing project,
+            bringing together advanced movement, combat systems, animation fidelity, AI behavior,
+            and UI into a single cohesive gameplay prototype. The goal was to push system interaction
+            and polish closer to production-level gameplay.
+        </p>
+
+        <ul style="margin-top: 1.2rem;">
+            <li>Expansion of vaulting and climbing with layered movement systems</li>
+            <li>IK leg system for grounded movement and uneven surfaces</li>
+            <li>FABRIK hand IK to ensure hands correctly follow the weapon</li>
+            <li>Turn-in-place animation for improved idle and aiming fidelity</li>
+            <li>Weapon sway reacting to movement and camera input</li>
+            <li>Advanced traversal including roll, slide, and cover system</li>
+            <li>Gunplay with different ammo types per weapon</li>
+            <li>UI displaying player health and weapon-specific ammo</li>
+            <li>Grunt enemy AI types using EQS for decision making</li>
+        </ul>
+    </div>
+</section>
+
+<!-- DETAILED EXPLANATION -->
+<section class="wrapper style1">
+    <div class="title">System Breakdown</div>
+    <div class="container">
+
+        <h3>Expansion of Traversal & Movement</h3>
+        <p>
+            Project G_M builds on the earlier vaulting and climbing systems by introducing
+            additional traversal mechanics such as rolling, sliding, and cover-based movement.
+            These systems are layered on top of a shared movement state framework to prevent
+            conflicts while maintaining responsiveness and player control.
+        </p>
+
+        <h3>IK Systems & Animation Fidelity</h3>
+        <p>
+            The character animation system combines IK leg placement for grounding with
+            FABRIK-based hand IK to ensure accurate weapon alignment. Turn-in-place animations
+            handle large rotation changes while idle or aiming, improving visual clarity and
+            eliminating unnatural snapping during rotation.
+        </p>
+
+        <h3>Weapon Handling & Gunplay</h3>
+        <p>
+            Gunplay systems support multiple weapon types, each with its own ammo pool and
+            firing behavior. Weapon sway is applied dynamically based on movement and camera
+            input, reinforcing weight and responsiveness. All weapon logic is tightly integrated
+            with animation and IK to maintain consistency during combat.
+        </p>
+
+        <h3>Cover System & Tactical Movement</h3>
+        <p>
+            The cover system allows the player to dynamically enter and exit cover, blending
+            smoothly with aiming, firing, and traversal. Sliding and rolling mechanics provide
+            additional evasive options, encouraging fluid movement during combat encounters.
+        </p>
+
+        <h3>Enemy AI Using EQS</h3>
+        <p>
+            Multiple grunt enemy AI types were implemented using Unreal’s Environment Query
+            System (EQS). AI agents evaluate positions for cover, attack angles, and movement,
+            allowing them to react dynamically to player positioning and combat state.
+        </p>
+
+        <h3>UI & Player Feedback</h3>
+        <p>
+            A lightweight UI system displays player health and weapon-specific ammo counts.
+            UI updates are driven directly by gameplay state changes to ensure accuracy during
+            fast-paced combat and traversal, reinforcing player awareness at all times.
+        </p>
+
+    </div>
+</section>
+
+<!-- TECHNICAL BREAKDOWN -->
+<section class="wrapper style3">
+    <div class="title">Technical Breakdown</div>
+    <div class="container">
+        <div class="row aln-center">
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Advanced Movement</h3>
+                    <p>Rolling, sliding, cover, and layered traversal states.</p>
+                </section>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Animation & IK</h3>
+                    <p>Leg IK, FABRIK hand IK, and turn-in-place integration.</p>
+                </section>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>AI & Combat</h3>
+                    <p>EQS-driven enemies and weapon-based gunplay.</p>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ENGINEERING CHALLENGES -->
+<section class="wrapper style2">
+    <div class="title">Engineering Challenges</div>
+    <div class="container">
+        <ul>
+            <li>Managing complex movement state combinations</li>
+            <li>Blending IK and animation without visual artifacts</li>
+            <li>Keeping gunplay responsive while preserving animation fidelity</li>
+            <li>Ensuring AI decision-making remains performant and readable</li>
+        </ul>
+    </div>
+</section>
+
+<!-- TAKEAWAY -->
+<section class="wrapper style1">
+    <div class="title">Takeaway</div>
+    <div class="container">
+        <ul>
+            <li>Advanced character movement systems</li>
+            <li>High-fidelity animation and IK integration</li>
+            <li>Combat and AI system interaction</li>
+            <li>Production-scale gameplay architecture</li>
+        </ul>
+
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="project-multiplayer.html" class="button primary">
+                Next Project →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</div>
+</body>
+</html>

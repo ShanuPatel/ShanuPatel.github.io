@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Project Multiplayer | Gameplay Programmer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Custom Styles -->
+    <style>
+        .game-modes-row {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .game-mode-card {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .game-mode-card iframe {
+            width: 100%;
+            height: 220px;
+        }
+
+        .game-mode-card ul {
+            margin-top: 0.8rem;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+<div id="page-wrapper">
+
+<!-- HEADER -->
+<section id="header" class="wrapper">
+    <div id="logo">
+        <h1>Project Multiplayer</h1>
+        <p>Steam-Compatible Multiplayer Shooter · Unreal Engine · C++</p>
+    </div>
+
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="projects.html">Projects</a></li>
+            <li><a href="project_GLSL.html">Engine</a></li>
+        </ul>
+    </nav>
+</section>
+
+<!-- GAMEPLAY MODES -->
+<section class="wrapper style1">
+    <div class="title">Gameplay Modes</div>
+    <div class="container">
+
+        <div class="game-modes-row">
+
+            <div class="game-mode-card">
+                <h3>Free For All</h3>
+                <iframe src="https://www.youtube.com/embed/7FIQn3UW7F4" allowfullscreen></iframe>
+                <ul>
+                    <li>Every player competes individually</li>
+                    <li>No teams or shared objectives</li>
+                    <li>Server tracks kills and respawns</li>
+                </ul>
+            </div>
+
+            <div class="game-mode-card">
+                <h3>Team Deathmatch</h3>
+                <iframe src="https://www.youtube.com/embed/ae9pie-71mE" allowfullscreen></iframe>
+                <ul>
+                    <li>Players split into opposing teams</li>
+                    <li>Team score synchronized by server</li>
+                    <li>Score or time-based win condition</li>
+                </ul>
+            </div>
+
+            <div class="game-mode-card">
+                <h3>Capture The Flag</h3>
+                <iframe src="https://www.youtube.com/embed/Z8MdtdNj5Cc" allowfullscreen></iframe>
+                <ul>
+                    <li>Objective-based team gameplay</li>
+                    <li>Flag state fully replicated</li>
+                    <li>Encourages coordinated play</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECT OVERVIEW + BULLETS -->
+<section class="wrapper style2">
+    <div class="title">Project Overview</div>
+    <div class="container">
+        <p>
+            <strong>Project Multiplayer</strong> was built specifically with Steam online play
+            in mind, focusing on a client–server authoritative networking model.
+            The project explores scalable multiplayer architecture, replicated gameplay
+            systems, and production-style online features such as server browsing and hosting.
+        </p>
+
+        <ul style="margin-top: 1.2rem;">
+            <li>Client-server authoritative architecture</li>
+            <li>Fully replicated gameplay logic</li>
+            <li>Steam-compatible server browser for hosting and joining games</li>
+            <li>Three multiplayer game modes (FFA, TDM, CTF)</li>
+            <li>Five plus weapon types with unique ammo handling</li>
+            <li>Player loadout: two primary weapons + one sidearm</li>
+            <li>Grenade system supporting up to four grenades</li>
+            <li>Power-ups including shield, super jump, and ammo pickups</li>
+            <li>HUD displaying ammo, grenades, health, and power-up counters</li>
+        </ul>
+    </div>
+</section>
+
+<!-- DETAILED SYSTEM EXPLANATION -->
+<section class="wrapper style1">
+    <div class="title">System Breakdown</div>
+    <div class="container">
+
+        <h3>Networking & Architecture</h3>
+        <p>
+            The project uses a client-server authoritative networking model where all
+            gameplay-critical logic is validated and executed on the server. Player movement,
+            combat actions, weapon usage, and power-up states are replicated to ensure fairness
+            and consistency across all connected clients.
+        </p>
+
+        <h3>Server Browser & Steam Play</h3>
+        <p>
+            A server browser allows players to host or join multiplayer matches seamlessly.
+            The system was designed with Steam play in mind, enabling session discovery,
+            connection handling, and match flow similar to production multiplayer titles.
+        </p>
+
+        <h3>Weapon & Inventory System</h3>
+        <p>
+            Players can equip up to two main weapons and one sidearm pistol. Each weapon type
+            maintains its own ammo pool and firing behavior. Grenades are handled as a limited
+            resource, with players able to carry up to four at a time, all synchronized across
+            the network.
+        </p>
+
+        <h3>Power-Ups & Pickups</h3>
+        <p>
+            The game includes multiple power-ups such as shields, super jump, and ammo pickups.
+            Each power-up has its own duration or counter and is replicated to all clients.
+            The HUD displays active power-ups and remaining effects to keep players informed
+            during fast-paced gameplay.
+        </p>
+
+        <h3>HUD & Player Feedback</h3>
+        <p>
+            The HUD displays weapon ammo, grenade count, player health, and active power-ups.
+            All UI elements are driven by replicated gameplay state to ensure accuracy and
+            responsiveness, even under high network load.
+        </p>
+
+        <h3>Game Modes & Replication</h3>
+        <p>
+            Each game mode defines its own win conditions and scoring logic, all executed on
+            the server. Objective states, scores, and match progression are replicated to
+            guarantee synchronization and prevent client-side manipulation.
+        </p>
+
+    </div>
+</section>
+
+<!-- TECHNICAL BREAKDOWN -->
+<section class="wrapper style3">
+    <div class="title">Technical Breakdown</div>
+    <div class="container">
+        <div class="row aln-center">
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Networking Model</h3>
+                    <p>Authoritative server with replicated gameplay state.</p>
+                </section>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Weapon Systems</h3>
+                    <p>Multi-weapon inventory with per-weapon ammo pools.</p>
+                </section>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Power-Ups & HUD</h3>
+                    <p>Replicated power-ups with real-time HUD feedback.</p>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ENGINEERING CHALLENGES -->
+<section class="wrapper style2">
+    <div class="title">Engineering Challenges</div>
+    <div class="container">
+        <ul>
+            <li>Maintaining authoritative control while keeping gameplay responsive</li>
+            <li>Efficient replication of weapons, power-ups, and inventory</li>
+            <li>Keeping HUD state synchronized under network latency</li>
+            <li>Designing scalable and reusable game mode logic</li>
+        </ul>
+    </div>
+</section>
+
+<!-- TAKEAWAY -->
+<section class="wrapper style3">
+    <div class="title">Takeaway</div>
+    <div class="container">
+        <ul>
+            <li>Multiplayer networking expertise</li>
+            <li>Server-authoritative gameplay design</li>
+            <li>Inventory and weapon system architecture</li>
+            <li>Steam-ready multiplayer workflows</li>
+        </ul>
+
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="project_GLSL.html" class="button primary">
+                Engine Project →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</div>
+</body>
+</html>

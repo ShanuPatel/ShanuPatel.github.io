@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Valley Thief | Gameplay Programmer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+<div id="page-wrapper">
+
+<!-- HEADER -->
+<section id="header" class="wrapper">
+    <div id="logo">
+        <h1>Valley Thief</h1>
+        <p>Single-Player Stealth Game · Unreal Engine · C++</p>
+    </div>
+
+        <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="projects.html">Projects</a></li>
+            <li><a href="project_GLSL.html">Engine</a></li>
+        </ul>
+    </nav>
+</section>
+
+<!-- GAMEPLAY VIDEO + BULLETS -->
+<section class="wrapper style1">
+    <div class="title">Gameplay</div>
+    <div class="container">
+
+        <iframe width="100%" height="480"
+        src="https://www.youtube.com/embed/pRgnTpRjusE"
+        allowfullscreen></iframe>
+
+        <ul style="margin-top: 1.5rem;">
+            <li>Entire gameplay implemented purely in C++</li>
+            <li>Solo-developed project with full system ownership</li>
+            <li>Stealth-focused core gameplay from start to end of a mission</li>
+            <li>Custom character animations authored in Blender</li>
+            <li>Mix of custom-made and Unreal-provided assets</li>
+            <li>UI displaying ammo count, objectives, and mission progression</li>
+            <li>Clear gameplay feedback prioritizing stealth awareness</li>
+        </ul>
+
+    </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="wrapper style2">
+    <div class="title">Project Overview</div>
+    <div class="container">
+        <p>
+            <strong>Valley Thief</strong> is a single-player stealth-action prototype built
+            to deeply understand Unreal Engine’s internal gameplay architecture.
+            The project avoids Blueprint-heavy workflows and instead focuses on
+            building systems directly in C++ to gain low-level control and clarity.
+        </p>
+    </div>
+</section>
+
+<!-- DETAILED EXPLANATION -->
+<section class="wrapper style1">
+    <div class="title">Development Breakdown</div>
+    <div class="container">
+
+        <h3>C++-First Gameplay Architecture</h3>
+        <p>
+            The entire project was developed using C++ as the primary scripting layer.
+            Core gameplay systems such as player movement, stealth logic, interaction,
+            combat, UI updates, and mission flow were all implemented without relying on
+            Blueprint-driven logic. This approach helped maintain deterministic behavior,
+            easier debugging, and a clearer understanding of Unreal’s gameplay framework.
+        </p>
+
+        <h3>Animation Pipeline</h3>
+        <p>
+            All character animations were authored from scratch in Blender and then
+            integrated into Unreal Engine. Custom animation states were connected to
+            gameplay logic through C++-driven animation control, ensuring smooth
+            transitions while reacting accurately to player actions such as movement,
+            crouching, stealth interactions, and combat.
+        </p>
+
+        <h3>Stealth-Focused Design</h3>
+        <p>
+            Stealth is the primary design pillar of the project. Enemy awareness,
+            player visibility, and interaction feedback were designed to reinforce
+            stealth-based decision making. The gameplay systems prioritize clarity,
+            giving the player readable feedback on detection, objectives, and risk.
+        </p>
+
+        <h3>User Interface & Mission Flow</h3>
+        <p>
+            The UI was designed to support gameplay without overwhelming the player.
+            Ammo counts, active objectives, and mission progress are clearly displayed
+            and updated through C++ systems. The entire mission, from start to end,
+            is structured to maintain immersion and reinforce stealth as the main focus.
+        </p>
+
+        <h3>Solo Development</h3>
+        <p>
+            This project was built entirely by a single developer, covering gameplay
+            programming, animation creation, system design, and integration. This
+            demonstrates the ability to own a full vertical slice and manage multiple
+            disciplines within a single production pipeline.
+        </p>
+
+    </div>
+</section>
+
+<!-- TECHNICAL BREAKDOWN -->
+<section class="wrapper style3">
+    <div class="title">Technical Breakdown</div>
+    <div class="container">
+        <div class="row aln-center">
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>C++ Gameplay Systems</h3>
+                    <p>All core mechanics written in C++ for clarity and control.</p>
+                </section>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Stealth Mechanics</h3>
+                    <p>Detection, visibility, and interaction systems driving gameplay.</p>
+                </section>
+            </div>
+
+            <div class="col-4 col-12-medium">
+                <section class="highlight">
+                    <h3>Animation Integration</h3>
+                    <p>Blender-authored animations tied directly to gameplay logic.</p>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ENGINEERING CHALLENGES -->
+<section class="wrapper style2">
+    <div class="title">Engineering Challenges</div>
+    <div class="container">
+        <ul>
+            <li>Building animation-driven gameplay without Blueprint reliance</li>
+            <li>Maintaining clean and scalable C++ architecture</li>
+            <li>Synchronizing UI feedback with gameplay state</li>
+            <li>Designing stealth mechanics that feel fair and readable</li>
+        </ul>
+    </div>
+</section>
+
+<!-- TAKEAWAY -->
+<section class="wrapper style1">
+    <div class="title">Takeaway</div>
+    <div class="container">
+        <ul>
+            <li>Strong understanding of Unreal Engine internals</li>
+            <li>C++-first gameplay programming workflow</li>
+            <li>End-to-end ownership of a solo project</li>
+            <li>Animation, UI, and gameplay system integration</li>
+        </ul>
+
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="ancient-ward.html" class="button primary">
+                Next Project →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</div>
+</body>
+</html>
