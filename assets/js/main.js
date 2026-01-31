@@ -64,3 +64,47 @@
 				});
 
 })(jQuery);
+
+(() => {
+    const track = document.querySelector('.hero-track');
+    const slides = track.children;
+    const prev = document.querySelector('.hero-nav.prev');
+    const next = document.querySelector('.hero-nav.next');
+    const dots = document.querySelectorAll('.hero-dots .dot');
+
+    let index = 0;
+    let startX = 0;
+
+    function update() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+
+    next.onclick = () => {
+        index = (index + 1) % slides.length;
+        update();
+    };
+
+    prev.onclick = () => {
+        index = (index - 1 + slides.length) % slides.length;
+        update();
+    };
+
+    dots.forEach((dot, i) => {
+        dot.onclick = () => {
+            index = i;
+            update();
+        };
+    });
+
+    // Swipe support
+    track.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (diff > 50) next.onclick();
+        if (diff < -50) prev.onclick();
+    });
+})();

@@ -3020,3 +3020,217 @@ body.project_GLSL #header {
     background-repeat: no-repeat;
 }
 
+
+/* ===== HERO IMAGE GALLERY ===== */
+.hero-gallery {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 0.35em;
+    position: relative;
+}
+
+.hero-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.hero-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* ===== CONTROLS BELOW IMAGE ===== */
+.hero-controls {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25em;
+}
+
+/* Arrows */
+.hero-nav {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: unset;
+    padding: 0;
+    line-height: normal;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.hero-nav:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+/* Dots */
+.hero-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.hero-dots .dot {
+    width: 10px;
+    height: 10px;
+    background: #aaa;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.hero-dots .dot.active {
+    background: #fff;
+}
+
+/* Mobile */
+@media screen and (max-width: 736px) {
+    .hero-gallery {
+        height: 260px;
+    }
+}
+
+
+/* =======================================================
+   GLOBAL THEME OVERRIDE
+   Peach -> Red
+   White  -> Black
+   ======================================================= */
+
+/* Primary red color */
+:root {
+    --primary-red: #841e19;   /* your chosen red */
+    --primary-dark: #000;
+    --text-light: #eaeaea;
+}
+/* Wrapper backgrounds */
+.wrapper.style1 {
+    background: var(--primary-red) !important;
+    color: var(--text-light) !important;
+}
+
+.wrapper.style1 .title {
+    background: var(--primary-red) !important;
+    color: #fff !important;
+}
+
+.wrapper.style2 {
+    background: var(--primary-dark) !important;
+    color: #ccc !important;
+}
+
+.wrapper.style2 .title {
+    background: var(--primary-dark) !important;
+    color: #fff !important;
+}
+
+.wrapper.style3 {
+    background: #1a1a1a !important;
+    color: #ccc !important;
+}
+
+.wrapper.style3 .title {
+    background: #1a1a1a !important;
+    color: #fff !important;
+}
+
+/* Text overrides */
+body {
+    background: #000 !important;
+    color: #ccc !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+strong, b {
+    color: #fff !important;
+}
+
+/* Buttons */
+.button.style1 {
+    background: var(--primary-red) !important;
+    color: #fff !important;
+}
+
+.button.style1:hover {
+    background: #e53935 !important;
+}
+
+.button.style3 {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.button.style3:hover {
+    background: #222 !important;
+}
+
+/* Feature titles (icons headers) */
+.feature-list h3 {
+    color: var(--primary-red) !important;
+}
+
+/* Highlights cards */
+.highlight {
+    background: #000 !important;
+    color: #ccc !important;
+}
+
+/* Footer */
+#footer {
+    background: #000 !important;
+    color: #aaa !important;
+}
+
+#footer .title {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.highlight {
+    background: #1a1a1a !important;
+    color: #ccc !important;
+    border-radius: 0.35em;
+}
+
+/* =======================================================
+   CONTACT SECTION (FOOTER) – GREY BACKGROUND
+   ======================================================= */
+
+#footer {
+    background: #1e1e1e !important;   /* dark grey */
+    color: #bbb !important;
+}
+
+#footer .title {
+    background: #1e1e1e !important;
+    color: #fff !important;
+}
+
+/* Contact cards / text */
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4,
+#footer p,
+#footer a {
+    color: #ddd !important;
+}
+
+/* Optional: subtle separation from black section above */
+#footer {
+    border-top: 1px solid #2a2a2a;
+}
